@@ -33,7 +33,7 @@ import Layout from '@/layout'
 export const constantRoutes = [
   {
     path: '/login',
-    component: () => import('@/views/login/index'),
+    component: () => import('@/views/login'),
     hidden: true
   },
 
@@ -51,115 +51,126 @@ export const constantRoutes = [
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: { title: '仪表盘', icon: 'dashboard' }
     }]
   },
-
   {
-    path: '/example',
+    path: '/configuration',
     component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
+    redirect: '/configuration/network-share',
+    name: 'Configuration',
+    meta: { title: '配置', icon: 'config' },
     children: [
       {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        path: 'network-share',
+        name: 'NetworkShare',
+        component: () => import('@/views/config/components/NetworkShare'),
+        meta: { title: '网络分享', icon: 'network-share' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        path: 'phone-config',
+        name: 'PhoneConfig',
+        component: () => import('@/views/config/components/PhoneConfig'),
+        meta: { title: '手咪配置', icon: 'phone-config' }
+      },
+      {
+        path: 'data-business',
+        name: 'DataBusiness',
+        component: () => import('@/views/config/components/DataBusiness'),
+        meta: { title: '数据业务', icon: 'data-business' }
+      },
+      {
+        path: 'traffic-statistics',
+        name: 'TrafficStatistics',
+        component: () => import('@/views/config/components/TrafficStatistics'),
+        meta: { title: '流量统计', icon: 'traffic-statistics' }
+      },
+      {
+        path: 'sos-config',
+        name: 'SOSConfig',
+        component: () => import('@/views/config/components/SOSConfig'),
+        meta: { title: 'SOS配置', icon: 'sos-config' }
+      },
+      {
+        path: 'vpn-config',
+        name: 'VPNConfig',
+        component: () => import('@/views/config/components/VPNConfig'),
+        meta: { title: 'VPN配置', icon: 'vpn-config' }
+      },
+      {
+        path: 'firewall-config',
+        name: 'FirewallConfig',
+        component: () => import('@/views/config/components/FirewallConfig'),
+        meta: { title: '防火墙配置', icon: 'firewall-config' }
+      },
+      {
+        path: 'other-config',
+        name: 'OtherConfig',
+        component: () => import('@/views/config/components/OtherConfig'),
+        meta: { title: '其他配置', icon: 'other-config' }
+      },
+      {
+        path: 'firmware-update',
+        name: 'FirmwareUpdate',
+        component: () => import('@/views/config/components/FirmwareUpdate'),
+        meta: { title: '升级固件', icon: 'firmware-update' }
+      },
+      {
+        path: 'restore-config',
+        name: 'RestoreConfig',
+        component: () => import('@/views/config/components/RestoreConfig'),
+        meta: { title: '回复默认设置', icon: 'restore-config' }
+      },
+      {
+        path: 'reboot-device',
+        name: 'RebootDevice',
+        component: () => import('@/views/config/components/RebootDevice'),
+        meta: { title: '重启设备', icon: 'reboot-device' }
+      },
+      {
+        path: 'about-device',
+        name: 'AboutDevice',
+        component: () => import('@/views/config/components/AboutDevice'),
+        meta: { title: '关于设备', icon: 'about-device' }
       }
     ]
   },
-
   {
-    path: '/form',
+    path: '/message',
     component: Layout,
     children: [
       {
         path: 'index',
-        name: 'Form',
-        component: () => import('@/views/form/index'),
-        meta: { title: 'Form', icon: 'form' }
+        name: 'Message',
+        component: () => import('@/views/message/index'),
+        meta: { title: '短信', icon: 'message' }
       }
     ]
   },
-
   {
-    path: '/nested',
-    component: Layout,
-    redirect: '/nested/menu1',
-    name: 'Nested',
-    meta: {
-      title: 'Nested',
-      icon: 'nested'
-    },
-    children: [
-      {
-        path: 'menu1',
-        component: () => import('@/views/nested/menu1/index'), // Parent router-view
-        name: 'Menu1',
-        meta: { title: 'Menu1' },
-        children: [
-          {
-            path: 'menu1-1',
-            component: () => import('@/views/nested/menu1/menu1-1'),
-            name: 'Menu1-1',
-            meta: { title: 'Menu1-1' }
-          },
-          {
-            path: 'menu1-2',
-            component: () => import('@/views/nested/menu1/menu1-2'),
-            name: 'Menu1-2',
-            meta: { title: 'Menu1-2' },
-            children: [
-              {
-                path: 'menu1-2-1',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-1'),
-                name: 'Menu1-2-1',
-                meta: { title: 'Menu1-2-1' }
-              },
-              {
-                path: 'menu1-2-2',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-2'),
-                name: 'Menu1-2-2',
-                meta: { title: 'Menu1-2-2' }
-              }
-            ]
-          },
-          {
-            path: 'menu1-3',
-            component: () => import('@/views/nested/menu1/menu1-3'),
-            name: 'Menu1-3',
-            meta: { title: 'Menu1-3' }
-          }
-        ]
-      },
-      {
-        path: 'menu2',
-        component: () => import('@/views/nested/menu2/index'),
-        name: 'Menu2',
-        meta: { title: 'menu2' }
-      }
-    ]
-  },
-
-  {
-    path: 'external-link',
+    path: '/contact',
     component: Layout,
     children: [
       {
-        path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
-        meta: { title: 'External Link', icon: 'link' }
+        path: 'index',
+        name: 'Contact',
+        component: () => import('@/views/contact/index'),
+        meta: { title: '联系人', icon: 'peoples' }
       }
     ]
   },
-
+  {
+    path: '/record',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Record',
+        component: () => import('@/views/record/index'),
+        meta: { title: '通信记录', icon: 'form' }
+      }
+    ]
+  },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
