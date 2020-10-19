@@ -3,7 +3,12 @@
     <h3>设备状态</h3>
     <el-divider />
     <el-col :span="24">
-      <el-table :data="tableData" border style="width: 100%">
+      <el-table
+        v-loading="listLoading"
+        :data="tableData"
+        border
+        style="width: 100%"
+      >
         <el-table-column prop="project" label="项目" />
         <el-table-column prop="status" label="当前状态" />
       </el-table>
@@ -12,30 +17,30 @@
 </template>
 
 <script>
+import { getDeviceStatus } from '@/api/dashboard/deviceStatus'
 export default {
   name: 'DeviceStatus',
   data() {
     return {
-      tableData: [{
-        project: '(卫星) 网络状态',
-        status: '未入网'
-      },
-      {
-        project: '(卫星)入网频点',
-        status: '未知'
-      },
-      {
-        project: '(卫星)业务状态',
-        status: '未知'
-      },
-      {
-        project: '(卫星)业务频点',
-        status: '未知'
-      },
-      {
-        project: '(卫星)波束号',
-        status: '未知'
-      }]
+      tableData: [],
+      listLoading: true
+    }
+  },
+  created() {
+    this.getData()
+  },
+  methods: {
+    getData() {
+      this.tableLoading = true
+      getDeviceStatus().then(response => {
+        this.tableData = response.data.items
+      })
+      // this.tableData = JSON.parse(response.data.items.)
+      console.log(this.tableData)
+      // Just to simulate the time of the request
+      setTimeout(() => {
+        this.listLoading = false
+      }, 1.5 * 1000)
     }
   }
 }

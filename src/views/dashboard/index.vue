@@ -33,7 +33,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import DeviceStatus from './components/DeviceStatus'
-import DeviceSwitch from './components/DeviceSwitch'
+import DeviceSwitch from './components/DeviceSwitch/index'
 import AntennaStatus from './components/AntennaStatus'
 import TrafficStatus from './components/TrafficStatus'
 export default {

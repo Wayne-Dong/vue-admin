@@ -1,8 +1,8 @@
 import request from '@/utils/request'
 
-export function getList(params) {
+export function getAntennaStatus(params) {
   return request({
-    url: '/vue-admin/table/list',
+    url: '/vue-admin/antennaStatus',
     method: 'get',
     params
   })

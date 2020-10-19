@@ -12,30 +12,22 @@
 </template>
 
 <script>
+import { getAntennaStatus } from '@/api/dashboard/antennaStatus'
 export default {
   name: 'AntennaStatus',
   data() {
     return {
-      tableData: [{
-        project: '(卫星) 网络状态',
-        status: '未入网'
-      },
-      {
-        project: '(卫星)入网频点',
-        status: '未知'
-      },
-      {
-        project: '(卫星)业务状态',
-        status: '未知'
-      },
-      {
-        project: '(卫星)业务频点',
-        status: '未知'
-      },
-      {
-        project: '(卫星)波束号',
-        status: '未知'
-      }]
+      tableData: []
+    }
+  },
+  created() {
+    this.getStatus()
+  },
+  methods: {
+    getStatus() {
+      getAntennaStatus().then(response => {
+        this.tableData = response.data.items
+      })
     }
   }
 }

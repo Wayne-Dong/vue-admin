@@ -1,8 +1,8 @@
 import request from '@/utils/request'
 
-export function getList(params) {
+export function getDeviceStatus(params) {
   return request({
-    url: '/vue-admin/table/list',
+    url: '/vue-admin/deviceStatus',
     method: 'get',
     params
   })
