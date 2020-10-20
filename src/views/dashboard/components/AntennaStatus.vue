@@ -3,7 +3,7 @@
     <h3>天线状态</h3>
     <el-divider />
     <el-col :span="24">
-      <el-table :data="tableData" border style="width: 100%">
+      <el-table v-loading="loading" :data="tableData" border style="width: 100%">
         <el-table-column prop="project" label="项目" />
         <el-table-column prop="status" label="当前状态" />
       </el-table>
@@ -17,7 +17,8 @@ export default {
   name: 'AntennaStatus',
   data() {
     return {
-      tableData: []
+      tableData: [],
+      loading: false
     }
   },
   created() {
@@ -25,9 +26,13 @@ export default {
   },
   methods: {
     getStatus() {
+      this.loading = true
       getAntennaStatus().then(response => {
         this.tableData = response.data.items
       })
+      setTimeout(() => {
+        this.loading = false
+      }, 1.5 * 1000)
     }
   }
 }

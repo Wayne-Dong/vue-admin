@@ -1,13 +1,14 @@
 <template>
   <div class="switchContainer">
     <span>WiFi热点</span>
-    <el-divider />
+    <!-- <el-divider /> -->
     <el-main v-loading="loading">
       <img v-if="wifi" src="@/assets/switch_images/wifiEnabled.png" alt="WiFi热点">
       <img v-if="!wifi" src="@/assets/switch_images/wifiDisabled.png" alt="WiFi热点">
       <div>
         <el-switch v-model="wifi" active-color="#13ce66" inactive-color="#ff4949" @change="switchChange" />
       </div>
+      <el-divider />
     </el-main>
   </div>
 </template>

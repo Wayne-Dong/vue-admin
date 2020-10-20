@@ -2,25 +2,25 @@
   <el-row :gutter="10">
     <h3>设备开关</h3>
     <el-divider />
-    <el-col :span="3">
+    <el-col :xs="12" :md="6" :lg="6" :xl="3">
       <data-switch />
     </el-col>
-    <el-col :span="3">
+    <el-col :xs="12" :md="6" :lg="6" :xl="3">
       <phone-switch />
     </el-col>
-    <el-col :span="3">
+    <el-col :xs="12" :md="6" :lg="6" :xl="3">
       <location-switch />
     </el-col>
-    <el-col :span="3">
+    <el-col :xs="12" :md="6" :lg="6" :xl="3">
       <ethernet-switch />
     </el-col>
-    <el-col :span="3">
+    <el-col :xs="12" :md="6" :lg="6" :xl="3">
       <wifi-switch />
     </el-col>
-    <el-col :span="3">
+    <el-col :xs="12" :md="6" :lg="6" :xl="3">
       <bluetooth-switch />
     </el-col>
-    <el-col :span="3">
+    <el-col :xs="12" :md="6" :lg="6" :xl="3">
       <satellite-switch />
     </el-col>
   </el-row>
