@@ -3,7 +3,7 @@
     <h2>网络分享</h2>
     <p>网络分享配置，包括热点和以太网的修改与配置。</p>
     <div>
-      <div style="text-align: end; margin-bottom: 5px"><span>操作： </span><el-button type="danger" size="small">关闭</el-button></div>
+      <div style="text-align: right; margin-bottom: 5px"><span>以太网开关： </span><el-button type="danger" size="small">关闭</el-button></div>
       <el-table
         :data="ethernetData"
         border
@@ -12,9 +12,10 @@
         <el-table-column prop="project" label="以太网设置项" />
         <el-table-column prop="status" label="内容" />
       </el-table>
-      <div style="text-align: center; margin-top: 10px"><el-button type="primary" @click="dialogEthernetVisible = true">编辑</el-button></div>
+      <div style="text-align: left; margin-top: 10px"><el-button type="primary" @click="dialogEthernetVisible = true">编辑</el-button></div>
       <el-divider />
     </div>
+    <div style="text-align: right; margin-bottom: 5px"><span>热点开关： </span><el-button type="danger" size="small">关闭</el-button></div>
     <el-table
       :data="wifiData"
       border
@@ -23,6 +24,7 @@
       <el-table-column prop="project" label="热点设置项" />
       <el-table-column prop="status" label="内容" />
     </el-table>
+    <div style="text-align: left; margin-top: 10px"><el-button type="primary" @click="dialogWifiVisible = true">编辑</el-button></div>
     <el-dialog title="编辑以太网设置" :visible.sync="dialogEthernetVisible">
       <el-form :model="formEthernet">
         <el-form-item label="活动名称">
