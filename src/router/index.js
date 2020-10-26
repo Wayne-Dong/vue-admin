@@ -48,16 +48,16 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/dashboard',
     children: [{
-      path: 'dashboard',
+      path: '',
       name: 'Dashboard',
-      component: () => import('@/views/dashboard/index'),
+      component: () => import('@/views/dashboard'),
       meta: { title: '仪表盘', icon: 'dashboard' }
     }]
   },
   {
     path: '/configuration',
     component: Layout,
-    redirect: '/configuration/network-share',
+    // redirect: '/configuration/network-share',
     name: 'Configuration',
     meta: { title: '配置', icon: 'config' },
     children: [
@@ -119,7 +119,7 @@ export const constantRoutes = [
         path: 'restore-config',
         name: 'RestoreConfig',
         component: () => import('@/views/config/components/RestoreConfig'),
-        meta: { title: '回复默认设置', icon: 'restore-config' }
+        meta: { title: '恢复默认设置', icon: 'restore-config' }
       },
       {
         path: 'reboot-device',
@@ -140,9 +140,9 @@ export const constantRoutes = [
     component: Layout,
     children: [
       {
-        path: 'index',
+        path: '',
         name: 'Message',
-        component: () => import('@/views/message/index'),
+        component: () => import('@/views/message'),
         meta: { title: '短信', icon: 'message' }
       }
     ]
