@@ -35,9 +35,7 @@ export default {
       getDeviceStatus().then(response => {
         this.tableData = response.data.items
       })
-      // this.tableData = JSON.parse(response.data.items.)
       console.log(this.tableData)
-      // Just to simulate the time of the request
       setTimeout(() => {
         this.listLoading = false
       }, 1.5 * 1000)

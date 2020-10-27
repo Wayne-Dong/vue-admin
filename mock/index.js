@@ -4,11 +4,12 @@ const { param2Obj } = require('./utils')
 const user = require('./user')
 const deviceStatus = require('./deviceStatus')
 const antennaStatus = require('./antennaStatus')
-
+const networkShare = require('./configuration/networkShare')
 const mocks = [
   ...user,
   ...deviceStatus,
-  ...antennaStatus
+  ...antennaStatus,
+  ...networkShare
 ]
 
 // for front mock
