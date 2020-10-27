@@ -14,4 +14,18 @@ export function getWifiStatus(params) {
     params
   })
 }
+export function saveEthernetEdit(params) {
+  return request({
+    url: '/vue-admin/ethernetConfig',
+    method: 'post',
+    params
+  })
+}
+export function saveWifiEdit(params) {
+  return request({
+    url: '/vue-admin/wifiConfig',
+    method: 'post',
+    params
+  })
+}
 
