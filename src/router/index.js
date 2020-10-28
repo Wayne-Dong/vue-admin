@@ -51,7 +51,7 @@ export const constantRoutes = [
       path: '',
       name: 'Dashboard',
       component: () => import('@/views/dashboard'),
-      meta: { title: '仪表盘', icon: 'dashboard' }
+      meta: { title: '状态', icon: 'dashboard' }
     }]
   },
   {
@@ -64,73 +64,79 @@ export const constantRoutes = [
       {
         path: 'network-share',
         name: 'NetworkShare',
-        component: () => import('@/views/config/components/NetworkShare'),
+        component: () => import('@/views/configuration/components/NetworkShare'),
         meta: { title: '网络分享', icon: 'network-share' }
       },
       {
         path: 'phone-config',
         name: 'PhoneConfig',
-        component: () => import('@/views/config/components/PhoneConfig'),
+        component: () => import('@/views/configuration/components/PhoneConfig'),
         meta: { title: '手咪配置', icon: 'phone-config' }
+      },
+      {
+        path: 'bluetooth-config',
+        name: 'BluetoothConfig',
+        component: () => import('@/views/configuration/components/BluetoothConfig'),
+        meta: { title: '蓝牙配置', icon: 'bluetooth-config' }
       },
       {
         path: 'data-business',
         name: 'DataBusiness',
-        component: () => import('@/views/config/components/DataBusiness'),
+        component: () => import('@/views/configuration/components/DataBusiness'),
         meta: { title: '数据业务', icon: 'data-business' }
       },
       {
         path: 'traffic-statistics',
         name: 'TrafficStatistics',
-        component: () => import('@/views/config/components/TrafficStatistics'),
+        component: () => import('@/views/configuration/components/TrafficStatistics'),
         meta: { title: '流量统计', icon: 'traffic-statistics' }
       },
       {
         path: 'sos-config',
         name: 'SOSConfig',
-        component: () => import('@/views/config/components/SOSConfig'),
+        component: () => import('@/views/configuration/components/SOSConfig'),
         meta: { title: 'SOS配置', icon: 'sos-config' }
       },
       {
         path: 'vpn-config',
         name: 'VPNConfig',
-        component: () => import('@/views/config/components/VPNConfig'),
+        component: () => import('@/views/configuration/components/VPNConfig'),
         meta: { title: 'VPN配置', icon: 'vpn-config' }
       },
       {
         path: 'firewall-config',
         name: 'FirewallConfig',
-        component: () => import('@/views/config/components/FirewallConfig'),
+        component: () => import('@/views/configuration/components/FirewallConfig'),
         meta: { title: '防火墙配置', icon: 'firewall-config' }
       },
       {
         path: 'other-config',
         name: 'OtherConfig',
-        component: () => import('@/views/config/components/OtherConfig'),
+        component: () => import('@/views/configuration/components/OtherConfig'),
         meta: { title: '其他配置', icon: 'other-config' }
       },
       {
         path: 'firmware-update',
         name: 'FirmwareUpdate',
-        component: () => import('@/views/config/components/FirmwareUpdate'),
+        component: () => import('@/views/configuration/components/FirmwareUpdate'),
         meta: { title: '升级固件', icon: 'firmware-update' }
       },
       {
         path: 'restore-config',
         name: 'RestoreConfig',
-        component: () => import('@/views/config/components/RestoreConfig'),
+        component: () => import('@/views/configuration/components/RestoreConfig'),
         meta: { title: '恢复默认设置', icon: 'restore-config' }
       },
       {
         path: 'reboot-device',
         name: 'RebootDevice',
-        component: () => import('@/views/config/components/RebootDevice'),
+        component: () => import('@/views/configuration/components/RebootDevice'),
         meta: { title: '重启设备', icon: 'reboot-device' }
       },
       {
         path: 'about-device',
         name: 'AboutDevice',
-        component: () => import('@/views/config/components/AboutDevice'),
+        component: () => import('@/views/configuration/components/AboutDevice'),
         meta: { title: '关于设备', icon: 'about-device' }
       }
     ]

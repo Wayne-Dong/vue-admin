@@ -3,6 +3,7 @@
     <h2>网络分享</h2>
     <p>网络分享配置，包括热点和以太网的修改与配置。</p>
     <div>
+      <h4>以太网配置</h4>
       <table class="myTable">
         <tr>
           <th>以太网配置项</th>
@@ -33,6 +34,7 @@
       <el-divider />
     </div>
     <div>
+      <h4>热点配置</h4>
       <table class="myTable">
         <tr>
           <th>热点配置项</th>
@@ -72,7 +74,7 @@
       </table>
       <el-divider />
     </div>
-    <el-dialog title="编辑以太网设置" :visible.sync="dialogEthernetVisible">
+    <el-dialog title="编辑以太网配置" :visible.sync="dialogEthernetVisible">
       <el-form :model="ethernetForm">
         <el-form-item label="配置模式:" :label-width="formLabelWidth">
           <el-select v-model="ethernetForm.mode" placeholder="请选择模式">
@@ -89,7 +91,7 @@
         <el-button type="primary" @click="confirmEthernetEdit">确 定</el-button>
       </div>
     </el-dialog>
-    <el-dialog title="编辑热点设置" :visible.sync="dialogWifiVisible">
+    <el-dialog title="编辑热点配置" :visible.sync="dialogWifiVisible">
       <el-form :model="wifiForm">
         <el-form-item label="热点SSID：" :label-width="formLabelWidth">
           <el-input v-model="wifiForm.ssid" autocomplete="off" />
@@ -180,7 +182,6 @@ export default {
     switchEthernet() {
       this.ethernetSwitchLoading = true
       this.ethernetData.status = '正在执行操作...'
-      // this.ethernetSwitchText = '操作中...'
       setTimeout(() => {
         this.ethernetSwitchLoading = false
         if (this.ethernetSwitchType === 'danger') {
