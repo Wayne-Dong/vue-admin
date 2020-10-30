@@ -4,7 +4,7 @@
     <el-divider />
     <el-col :span="24">
       <el-table
-        v-loading="listLoading"
+        class="myTable"
         :data="tableData"
         border
         style="width: 100%"
@@ -31,14 +31,9 @@ export default {
   },
   methods: {
     getData() {
-      this.tableLoading = true
       getDeviceStatus().then(response => {
-        this.tableData = response.data.items
+        this.tableData = response.data
       })
-      console.log(this.tableData)
-      setTimeout(() => {
-        this.listLoading = false
-      }, 1.5 * 1000)
     }
   }
 }

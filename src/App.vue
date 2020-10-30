@@ -22,25 +22,25 @@ export default {
     border-collapse:collapse;
     table-layout: fixed;
   }
-  .myTable td, .myTable th
+  .myTable td
   {
     font-size: 15px;
     border:1px solid #EBEEF5;
     padding:15px 7px 15px 7px;
     width: 100px;
+    color:#000000;
   }
   .myTable th
   {
     font-size: 14px;
+    border:1px solid #EBEEF5;
     text-align:left;
-    padding-top:10px;
-    padding-bottom:10px;
-    /* background-color:#409EFF; */
+    padding:10px 7px 10px 7px;
     color:#606266;
   }
-  .myTable tr.alt td
+  .description
   {
-    color:#000000;
-    background-color:#EAF2D3;
+    font-size: 14px;
+    color:#606266;
   }
 </style>

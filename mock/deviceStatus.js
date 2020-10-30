@@ -11,8 +11,8 @@ const Mock = require('mockjs')
 //   }]
 // })
 
-const data = Mock.mock({
-  items: [
+const data = Mock.mock(
+  [
     { project: '(卫星)网络状态',
       status: '未入网'
     },
@@ -76,20 +76,15 @@ const data = Mock.mock({
     { project: '电池电量',
       status: '未知'
     }
-  ]
-})
+  ])
 module.exports = [
   {
     url: '/vue-admin/deviceStatus',
     type: 'get',
     response: config => {
-      const items = data.items
       return {
         code: 20000,
-        data: {
-          total: items.length,
-          items: items
-        }
+        data: data
       }
     }
   }

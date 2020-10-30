@@ -1,17 +1,15 @@
 import request from '@/utils/request'
 
-export function getEthernetStatus(params) {
+export function getEthernetStatus() {
   return request({
     url: '/vue-admin/ethernetStatus',
-    method: 'get',
-    params
+    method: 'get'
   })
 }
-export function getWifiStatus(params) {
+export function getWifiStatus() {
   return request({
     url: '/vue-admin/wifiStatus',
-    method: 'get',
-    params
+    method: 'get'
   })
 }
 export function saveEthernetEdit(params) {

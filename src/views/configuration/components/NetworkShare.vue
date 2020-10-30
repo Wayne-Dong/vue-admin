@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <h2>网络分享</h2>
-    <p>网络分享配置，包括热点和以太网的修改与配置。</p>
+    <p class="description">网络分享配置，包括热点和以太网的修改与配置。</p>
     <div>
       <h4>以太网配置</h4>
       <table class="myTable">
@@ -14,7 +14,7 @@
           <td>运行状态</td>
           <td>{{ ethernetData.status }}</td>
           <td>
-            <div v-loading="ethernetSwitchLoading" style="text-align: center;"><el-button :type="ethernetSwitchType" :autofocus="ethernetSwitchAutofocus" size="small" @click="switchEthernet">{{ ethernetSwitchText }}</el-button></div>
+            <div v-loading="ethernetSwitchLoading" style="text-align: center;"><el-button :type="ethernetSwitchType" size="small" @click="switchEthernet">{{ ethernetSwitchText }}</el-button></div>
           </td>
         </tr>
         <tr>
