@@ -6,12 +6,18 @@ const deviceStatus = require('./deviceStatus')
 const antennaStatus = require('./antennaStatus')
 const networkShare = require('./configuration/networkShare')
 const bluetoothConfig = require('./configuration/bluetoothConfig')
+const SOSConfig = require('./configuration/SOSConfig')
+const restoreConfig = require('./configuration/restoreConfig')
+const rebootDevice = require('./configuration/rebootDevice')
 const mocks = [
   ...user,
   ...deviceStatus,
   ...antennaStatus,
   ...networkShare,
-  ...bluetoothConfig
+  ...bluetoothConfig,
+  ...SOSConfig,
+  ...restoreConfig,
+  ...rebootDevice
 ]
 
 // for front mock

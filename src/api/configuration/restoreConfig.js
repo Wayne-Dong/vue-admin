@@ -1,8 +1,8 @@
 import request from '@/utils/request'
 
-export function getBluetoothStatus() {
+export function restoreConfig() {
   return request({
-    url: '/vue-admin/bluetoothStatus',
+    url: 'vue-admin/restoreConfig',
     method: 'get'
   })
 }

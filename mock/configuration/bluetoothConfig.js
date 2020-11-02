@@ -2,7 +2,7 @@ const Mock = require('mockjs')
 
 const bluetoothStatus = Mock.mock({
   item: {
-    status: '正在运行',
+    runningStatus: '正在运行',
     ssid: 'test1',
     mac: 'ADK-DJKDF-DFALS-SDD-DFF-AAGB',
     connectionStatus: '未连接',

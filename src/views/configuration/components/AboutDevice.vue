@@ -1,6 +1,7 @@
 <template>
   <div class="app-container">
-    <p>配置</p>
+    <h2>关于设备</h2>
+    <p class="description">设备版本信息</p>
   </div>
 </template>
 

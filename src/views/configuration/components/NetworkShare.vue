@@ -12,7 +12,7 @@
         </tr>
         <tr>
           <td>运行状态</td>
-          <td>{{ ethernetData.status }}</td>
+          <td>{{ ethernetData.runningStatus }}</td>
           <td>
             <div v-loading="ethernetSwitchLoading" style="text-align: center;"><el-button :type="ethernetSwitchType" size="small" @click="switchEthernet">{{ ethernetSwitchText }}</el-button></div>
           </td>
@@ -122,12 +122,12 @@ export default {
   data() {
     return {
       ethernetData: {
-        status: '',
+        runningStatus: '',
         mode: '',
         ip: ''
       },
       wifiData: {
-        status: '',
+        runningStatus: '',
         mode: '',
         ssid: '',
         safeMode: '',

@@ -1,14 +1,14 @@
 const Mock = require('mockjs')
 
 const ethernetStatus = Mock.mock({
-  item: { status: '正在运行',
+  item: { runningStatus: '正在运行',
     mode: 'static',
     ip: '116.32.23.56'
   }
 })
 const wifiStatus = Mock.mock({
   item: {
-    status: '正在运行',
+    runningStatus: '正在运行',
     ssid: 'test-2',
     mode: '2.4G',
     safeMode: 'WPA2-PSK',

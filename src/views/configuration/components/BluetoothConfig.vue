@@ -12,7 +12,7 @@
         </tr>
         <tr>
           <td>运行状态</td>
-          <td>{{ bluetoothData.status }}</td>
+          <td>{{ bluetoothData.runningStatus }}</td>
           <td><el-button size="small">开启</el-button></td>
         </tr>
         <tr>
@@ -91,7 +91,7 @@ export default {
   data() {
     return {
       bluetoothData: {
-        status: '',
+        runningStatus: '',
         ssid: '',
         mac: '',
         connectionStatus: '',

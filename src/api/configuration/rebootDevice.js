@@ -1,8 +1,7 @@
 import request from '@/utils/request'
-
-export function getBluetoothStatus() {
+export function rebootDevice() {
   return request({
-    url: '/vue-admin/bluetoothStatus',
+    url: '/vue-admin/rebootDevice',
     method: 'get'
   })
 }

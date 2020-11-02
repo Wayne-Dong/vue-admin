@@ -134,6 +134,10 @@
         </tr>
       </table>
     </div>
+    <div>
+      <h4>APN设置</h4>
+      <table />
+    </div>
   </div>
 </template>
 
